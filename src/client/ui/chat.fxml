@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Descripteur FXML de l'UI -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.ChatController">
+   <children>
+      <SplitPane dividerPositions="0.23123123123123124" prefHeight="406.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="33.0" text="Adresse du serveur" />
+                  <Label layoutX="23.0" layoutY="50.0" text="(directe ou multicast) :" />
+                  <TextField fx:id="entreeAdresseIP" layoutX="23.0" layoutY="69.0" prefHeight="25.0" prefWidth="119.0" />
+                  <Button fx:id="boutonConnexion" layoutX="23.0" layoutY="162.0" mnemonicParsing="false" onAction="#actionBoutonConnexion" text="Connexion" />
+                  <Label layoutX="23.0" layoutY="196.0" text="Etat de la connexion :" />
+                  <Label fx:id="labelEtatConnexion" layoutX="23.0" layoutY="212.0" text="Inconnue">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="23.0" layoutY="237.0" prefHeight="17.0" prefWidth="108.0" text="Reconnexion auto. :">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+                  <CheckBox fx:id="entreeReconnexionAuto" layoutX="123.0" layoutY="237.0" />
+                   <Label layoutX="23.0" layoutY="270.0" text="Mode NIO :">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+                   <CheckBox fx:id="entreeSelector" layoutX="85.0" layoutY="270.0" />
+                  <Label layoutX="23.0" layoutY="311.0" text="Votre pseudo :" />
+                  <TextField fx:id="entreePseudo" layoutX="22.0" layoutY="332.0" prefHeight="25.0" prefWidth="119.0" />
+                  <Label layoutX="23.0" layoutY="102.0" text="Port :" />
+                  <TextField fx:id="entreePort" layoutX="22.0" layoutY="120.0" prefHeight="26.0" prefWidth="119.0" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="26.0" layoutY="24.0" text="Message à envoyer :" />
+                  <TextField fx:id="entreeMessage" layoutX="26.0" layoutY="42.0" prefHeight="25.0" prefWidth="459.0" />
+                  <Label layoutX="26.0" layoutY="123.0" text="Discussion :" />
+                  <TextArea fx:id="areaDiscussion" editable="false" layoutX="26.0" layoutY="144.0" prefHeight="239.0" prefWidth="459.0" />
+                  <Button layoutX="26.0" layoutY="75.0" mnemonicParsing="false" onAction="#actionBoutonEnvoyer" text="Envoyer" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>
